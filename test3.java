@@ -128,13 +128,9 @@ public class test3 {
         System.out.println("12. " + task12Results);
 
 //13. Create a method of your own that solves a problem. In comments, write what the method does and why you created it.
-        ArrayList<Integer> dealtCard1 = new ArrayList<>();
-        dealtCard1.add(10);
-        ArrayList<Integer> dealtCard2 = new ArrayList<>();
-        dealtCard2.add(1);
-
-        String task13result = method13(dealtCard1, dealtCard2);
-        System.out.println("13. " + task13result);
+        int value = 150;
+        double myWeight = method13(value);
+        System.out.println("13. " + (myWeight));
 
     }
 
@@ -203,22 +199,8 @@ public class test3 {
 
 
     //13. Task 13 Method
-    public static String method13(ArrayList<Integer> firstCard, ArrayList<Integer> secondCard) {
-        int total1 = 0;
-        int total2 = 0;
-        for (int card1 : firstCard) {
-            total1 = total1 + card1;
-        }
-        for (int card2 : secondCard) {
-            total2 = total2 + card2;
-        }
-        int finalTotal1 = total1 + total2;
-        if ( finalTotal1 > 21) {
-            return "You have more than 21. You lose!";
-        } else if (finalTotal1 < 17) {
-            return "You should get another card.";
-        } else {
-            return "You should stay.";
-        }
+    public static double method13(int weightInLbs){
+        double weightInKg = weightInLbs * 0.453592;
+        return weightInKg;
     }
 }
